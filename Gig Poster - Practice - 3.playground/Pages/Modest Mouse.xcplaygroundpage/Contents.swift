@@ -32,7 +32,57 @@ let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 
 // Begin your solution here...
 
+// Make background colour
+canvas.fillColor = darkGrey
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
+// Draw grey lines
+
+var yCoord = 400
+
+canvas.lineColor = lightGrey
+
+for y in stride(from: 0, through: 400, by: 43){
+    
+    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: yCoord), lineWidth: 15, capStyle: NSBezierPath.LineCapStyle.square)
+
+    yCoord += 40
+    
+}
+
+yCoord = 400
+canvas.lineColor = black
+for y in stride(from: 400, through: 0, by: 43){
+    
+    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: -400, y: yCoord), lineWidth: 15, capStyle: NSBezierPath.LineCapStyle.square)
+
+    yCoord -= 40
+    
+}
+
+canvas.drawShapesWithBorders = false
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
+
+
+canvas.fillColor = Color.black
+
+
+
+//// Make grid
+//
+//canvas.lineColor = black
+//// Horizontal lines
+//for y in stride(from: 0, through: 600, by: 50){
+//
+//    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
+//
+//}
+//
+//// Vertical lines
+//for x in stride(from: 0, through: 400, by: 50){
+//
+//    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
+//}
 /*:
  ## Use Source Control
  

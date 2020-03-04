@@ -49,6 +49,7 @@ canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: yCoord), lineWidth
     yCoord += 40
 }
 
+
 //// Draw grey lines
 //
 //var yCoord = 400
@@ -98,22 +99,10 @@ canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
 canvas.fillColor = Color.black
 
 
+// Draw title
+canvas.textColor = black
+canvas.drawText(message: "modest mouse", at: Point(x: 15, y: 410), size: 40, kerning: 1.0)
 
-//// Make grid
-//
-//canvas.lineColor = black
-//// Horizontal lines
-//for y in stride(from: 0, through: 600, by: 50){
-//
-//    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
-//
-//}
-//
-//// Vertical lines
-//for x in stride(from: 0, through: 400, by: 50){
-//
-//    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
-//}
 /*:
  ## Use Source Control
  

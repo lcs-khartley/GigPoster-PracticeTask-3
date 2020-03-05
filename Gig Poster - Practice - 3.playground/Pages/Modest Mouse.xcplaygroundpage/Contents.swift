@@ -104,13 +104,16 @@ canvas.fillColor = Color.black
 canvas.textColor = black
 canvas.drawText(message: "modest mouse", at: Point(x: 15, y: 410), size: 40, kerning: 1.0)
 
+// Array that holds all of the small text at the top from order of left to right
 var text:[String] = ["at the speak in toungues social hall","saturday / august 24 1996", "with old hearts club", "4311 lorain ave. / cleveland, oh", "10 pm, all invited", "and melk"]
 
+// Make a base number for the index of the array
 var number = 0
 
 for y in stride(from: 570, through: 555, by: -15){
     
     for x in stride(from: 20, through: 280, by: 130){
+        // Take the number in the array to print the proper text for the location on the canvas
         canvas.drawText(message: text[number], at: Point(x: x, y: y), size: 7, kerning: 0.0)
         
         number += 1

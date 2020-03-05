@@ -78,6 +78,7 @@ canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: yCoord), lineWidth
 //}
 
 
+
 // Draw yellow lines
 canvas.lineColor = deepYellow
 
@@ -102,6 +103,19 @@ canvas.fillColor = Color.black
 // Draw title
 canvas.textColor = black
 canvas.drawText(message: "modest mouse", at: Point(x: 15, y: 410), size: 40, kerning: 1.0)
+
+var text:[String] = ["at the speak in toungues social hall","saturday / august 24 1996", "with old hearts club", "4311 lorain ave. / cleveland, oh", "10 pm, all invited", "and melk"]
+
+var number = 0
+
+for y in stride(from: 570, through: 555, by: -15){
+    
+    for x in stride(from: 20, through: 280, by: 130){
+        canvas.drawText(message: text[number], at: Point(x: x, y: y), size: 7, kerning: 0.0)
+        
+        number += 1
+    }
+}
 
 /*:
  ## Use Source Control
